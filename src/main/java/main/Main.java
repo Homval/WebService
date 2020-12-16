@@ -8,7 +8,6 @@ import org.eclipse.jetty.server.handler.HandlerList;
 import org.eclipse.jetty.server.handler.ResourceHandler;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
-import org.eclipse.jetty.util.resource.Resource;
 import servlets.HelloServlet;
 import servlets.SignInServlet;
 import servlets.SignUpServlet;
@@ -24,12 +23,12 @@ public class Main {
         HelloServlet helloServlet = new HelloServlet();
 
         ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
-        //context.addServlet(new ServletHolder(helloServlet), "/");
+        context.addServlet(new ServletHolder(helloServlet), "/");
         context.addServlet(new ServletHolder(signInServlet),"/signin");
         context.addServlet(new ServletHolder(signUpServlet), "/signup");
 
         ResourceHandler resourceHandler = new ResourceHandler();
-        resourceHandler.setBaseResource(Resource.newResource("C:\\Users\\Val\\IdeaProjects\\WebService\\src\\main\\resources"));
+        resourceHandler.setResourceBase("C:\\Users\\Val\\IdeaProjects\\WebService\\src\\main\\resources");
 
         HandlerList handlers = new HandlerList();
         handlers.setHandlers(new Handler[]{resourceHandler, context});
