@@ -36,7 +36,7 @@ public class SignInServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String login = req.getParameter("login");
-        String password = req.getParameter("pass");
+        String password = req.getParameter("password");
 
         if (login == null || password == null) {
             resp.setContentType("text/html;charset=utf-8");

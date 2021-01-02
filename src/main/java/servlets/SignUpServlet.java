@@ -25,9 +25,9 @@ public class SignUpServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String login = req.getParameter("login");
-        String password = req.getParameter("pass");
+        String password = req.getParameter("password");
 
-        if (login == null || password == null) {
+        if (login == null || password == null || accountService.getUserByLogin(login) != null) {
             resp.setContentType("text/html;charset=utf-8");
             resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
             return;
