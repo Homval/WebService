@@ -28,7 +28,7 @@ public class Main {
         context.addServlet(new ServletHolder(signUpServlet), "/signup");
 
         ResourceHandler resourceHandler = new ResourceHandler();
-        resourceHandler.setResourceBase("C:\\Users\\Val\\IdeaProjects\\WebService\\src\\main\\resources");
+        resourceHandler.setResourceBase("C:\\Users\\in00\\IdeaProjects\\WebService\\src\\main\\resources");
 
         HandlerList handlers = new HandlerList();
         handlers.setHandlers(new Handler[]{resourceHandler, context});

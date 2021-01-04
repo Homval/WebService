@@ -27,7 +27,7 @@ public class SignUpServlet extends HttpServlet {
         String login = req.getParameter("login");
         String password = req.getParameter("password");
 
-        if (login == null || password == null || accountService.getUserByLogin(login) != null) {
+        if (login == null || password == null) {
             resp.setContentType("text/html;charset=utf-8");
             resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
             return;
