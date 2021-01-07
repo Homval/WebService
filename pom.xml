@@ -30,7 +30,7 @@
                     <archive>
                         <manifest>
                             <mainClass>main.Main</mainClass>
-                        </manifest>m
+                        </manifest>
                     </archive>
                 </configuration>
             </plugin>
