@@ -20,7 +20,7 @@ public class UserDao {
     }
 
     public long addNewUser(String name, String password) {
-        return (long) (Long) session.save(new UserDataSet(name, password));
+        return (Long) session.save(new UserDataSet(name, password));
     }
 
     public void deleteUser(String name, String password) {
