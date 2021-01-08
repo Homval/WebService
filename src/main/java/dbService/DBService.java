@@ -13,8 +13,8 @@ import org.hibernate.service.ServiceRegistry;
 import java.util.function.Function;
 
 public class DBService {
-    private static final String hibernate_show_sql = "true";
-    private static final String hibernate_hbm2ddl_auto = "create";
+    private static final String hibernate_show_sql = "false";
+    private static final String hibernate_hbm2ddl_auto = "update";
 
     private final SessionFactory sessionFactory;
 
