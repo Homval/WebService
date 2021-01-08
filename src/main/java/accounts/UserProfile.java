@@ -3,7 +3,6 @@ package accounts;
 public class UserProfile {
     private final String login;
     private final String password;
-    //private final String email;
 
     public UserProfile(String login, String password) {
         this.login = login;
