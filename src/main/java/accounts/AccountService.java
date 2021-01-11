@@ -3,12 +3,13 @@ package accounts;
 
 import dbService.DBException;
 import dbService.DBService;
+import dbService.DBServiceImpl;
 
 public class AccountService {
     private final DBService service;
 
     public AccountService() {
-        service = new DBService();
+        service = new DBServiceImpl();
     }
 
     public void addNewUser(UserProfile user) {
